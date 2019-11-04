@@ -31,7 +31,7 @@ function historyGenerator() {
         .then(() => phase3(ticker))
         .then(() => {
             return {
-                'v1/ticker.json': JSON.stringify(ticker, null, 2)
+                'v1/history/ticker.json': JSON.stringify(ticker, null, 2)
             };
         });
 }
@@ -172,4 +172,4 @@ function getHorizonMain() {
         })
 }
 
-module.exports = historyGenerator;
+module.exports = {historyGenerator};
